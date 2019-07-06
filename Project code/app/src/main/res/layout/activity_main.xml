@@ -33,6 +33,7 @@
         android:ems="10"
         android:inputType="textEmailAddress"
         android:textColor="#010203"
+        android:hint="Enter email address"
         tools:layout_editor_absoluteX="99dp"
         tools:layout_editor_absoluteY="289dp" />
 
@@ -43,6 +44,7 @@
         android:ems="10"
         android:inputType="textPassword"
         android:textColor="#010203"
+        android:hint="Enter password"
         tools:layout_editor_absoluteX="99dp"
         tools:layout_editor_absoluteY="343dp" />
 
@@ -53,7 +55,7 @@
         android:background="#db5a6b"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="  Enter email and password below"
+        android:text="                   ChitChat App"
         tools:layout_editor_absoluteX="68dp"
         tools:layout_editor_absoluteY="227dp" />
 
