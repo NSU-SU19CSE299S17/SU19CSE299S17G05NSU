@@ -13,9 +13,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Exit"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="675dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="652dp" />
 
     <ImageButton
         android:id="@+id/imageButton"
