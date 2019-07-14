@@ -4,6 +4,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#a4c639"
     tools:context=".RegActivity">
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter phone number"
+        android:inputType="phone"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="135dp" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="203dp"
+        android:layout_height="35dp"
+        android:text="Registration Page"
+        android:textSize="10pt"
+        tools:layout_editor_absoluteX="104dp"
+        tools:layout_editor_absoluteY="59dp" />
+
+    <EditText
+        android:id="@+id/editText7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter country code"
+        android:inputType="numberSigned"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="196dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Verification code"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="282dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
