@@ -78,7 +78,7 @@ public class RegActivity extends AppCompatActivity {
     private void userIsLoggedIn(){
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if(user != null){
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            startActivity(new Intent(getApplicationContext(), MainPageActivity.class));
             finish();
             return;
         }
