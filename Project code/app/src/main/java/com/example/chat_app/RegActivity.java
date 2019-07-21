@@ -41,13 +41,18 @@ public class RegActivity extends AppCompatActivity {
 
         mSend.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                if(mVerificationId != null)
-                    verifyPhoneNumberWithCode();
-                else
-                    startPhoneNumberVerification();
+            public void onClick(View v) { startPhoneNumberVerification();
             }
         });
+
+        Button back = (Button) findViewById(R.id.button4);
+        back.setOnClickListener(new View.OnClickListener()
+            {
+            public void onClick(View v){
+                startActivity(new Intent(RegActivity.this, MainActivity.class));
+            }
+        });
+
 
         mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             @Override
@@ -87,4 +92,6 @@ public class RegActivity extends AppCompatActivity {
                 this, mCallbacks);
 
     }
+
+
 }
