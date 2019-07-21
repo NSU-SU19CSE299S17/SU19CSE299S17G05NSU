@@ -41,7 +41,12 @@ public class RegActivity extends AppCompatActivity {
 
         mSend.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { startPhoneNumberVerification();
+            public void onClick(View v) {
+                if(mVerificationId != null){
+                    verifyPhoneNumberWithCode();
+                }
+                else
+                    startPhoneNumberVerification();
             }
         });
 
@@ -62,9 +67,21 @@ public class RegActivity extends AppCompatActivity {
 
             @Override
             public void onVerificationFailed(FirebaseException e) {}
+
+            @Override
+            public void onCodeSent(String verificationId, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
+                super.onCodeSent(verificationId, forceResendingToken);
+                    mVerificationId = verificationId;
+                    mSend.setText("Verify Code");
+            }
         };
 
     }
+
+        private void verifyPhoneNumberWithCode(){
+            PhoneAuthCredential credential = PhoneAuthProvider.getCredential(mVerificationId, mCode.getText().toString());
+            signInWithPhoneAuthCredential(credential);
+        }
         private void signInWithPhoneAuthCredential(PhoneAuthCredential phoneAuthCredential){
             FirebaseAuth.getInstance().signInWithCredential(phoneAuthCredential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
