@@ -5,10 +5,8 @@ Sadman Ahmed
 1632066042
 sadman.ahmed01@northsouth.edu
 
- # Project Proposal
-<div style="display: flex; justify-content: center;">
-  <img src="http://old.unb.com.bd/media/imgAll/August2017/BG/NSU-Logo-201709100837.JPG"/>
-</div>
+# Project Proposal
+<img src="http://old.unb.com.bd/media/imgAll/August2017/BG/NSU-Logo-201709100837.JPG" align="middle"/>
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Encrypted Group-Chat App
