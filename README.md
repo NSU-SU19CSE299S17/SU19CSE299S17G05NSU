@@ -8,7 +8,9 @@ sadman.ahmed01@northsouth.edu
 # Project Proposal
 <p align="center">
 	<img src="http://old.unb.com.bd/media/imgAll/August2017/BG/NSU-Logo-201709100837.JPG">
+</p>
 
+<p align="center">	
  Encrypted Group-Chat App
 
  CSE299
