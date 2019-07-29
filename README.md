@@ -8,32 +8,32 @@ sadman.ahmed01@northsouth.edu
 # Project Proposal
 <p align="center">
 	<img src="http://old.unb.com.bd/media/imgAll/August2017/BG/NSU-Logo-201709100837.JPG">
+
+ Encrypted Group-Chat App
+
+ CSE299
+
+ Section: 17
+
+ Semester: Summer 2019
+
+ Faculty Name: Shaikh Shawon Arefin Shimon
+
+
+ By
+ 
+ Sadman Ahmed
+
+ 1632066042 
+
+ Group:05
+
+ sadman.ahmed01@northsouth.edu
+
+ Git repos link: https://github.com/SadmanAhmed97/SU19CSE299S17G05NSU
+
+ Date prepared: 16/06/2019
 </p>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Encrypted Group-Chat App
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CSE299
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Section: 17
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Semester: Summer 2019
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Faculty Name: Shaikh Shawon Arefin Shimon
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; By
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sadman Ahmed
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1632066042 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Group:05
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sadman.ahmed01@northsouth.edu
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Git repos link: https://github.com/SadmanAhmed97/SU19CSE299S17G05NSU
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date prepared: 16/06/2019
-
 
 
 1.	Project Details
