@@ -57,7 +57,7 @@
         android:inputType="textPersonName"
         android:text="                   ChitChat App"
         tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="227dp" />
+        tools:layout_editor_absoluteY="222dp" />
 
     <Button
         android:id="@+id/button2"
