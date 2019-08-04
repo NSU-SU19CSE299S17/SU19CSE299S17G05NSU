@@ -21,7 +21,7 @@ import com.google.firebase.auth.PhoneAuthProvider;
 
 import java.util.concurrent.TimeUnit;
 
-public class RegActivity extends AppCompatActivity {
+public class PhoneAuth extends AppCompatActivity {
     private EditText mPhoneNumber, mCode ;
     private Button mSend ;
     String mVerificationId ;
@@ -30,7 +30,7 @@ public class RegActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reg);
+        setContentView(R.layout.phone_auth);
         FirebaseApp.initializeApp(this);
 
         userIsLoggedIn();
@@ -54,7 +54,7 @@ public class RegActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener()
             {
             public void onClick(View v){
-                startActivity(new Intent(RegActivity.this, MainActivity.class));
+                startActivity(new Intent(PhoneAuth.this, MainActivity.class));
             }
         });
 

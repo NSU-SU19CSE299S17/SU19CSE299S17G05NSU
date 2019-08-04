@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#a4c639"
-    tools:context=".RegActivity">
+    tools:context=".PhoneAuth">
 
     <EditText
         android:id="@+id/phoneNumber"
@@ -22,7 +22,7 @@
         android:id="@+id/textView"
         android:layout_width="203dp"
         android:layout_height="35dp"
-        android:text="Registration Page"
+        android:text="Phone Registration"
         android:textSize="10pt"
         tools:layout_editor_absoluteX="104dp"
         tools:layout_editor_absoluteY="59dp" />
