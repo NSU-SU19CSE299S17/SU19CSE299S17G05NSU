@@ -6,11 +6,25 @@
     android:background="@color/colorAccent"
     tools:context=".MainActivity">
 
-    <include
-        android:id="@+id/main_page_toolbar"
-        layout="@layout/app_bar_layout">
 
-    </include>
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <include
+            android:id="@+id/main_page_toolbar"
+            layout="@layout/app_bar_layout">
+
+        </include>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/main_tabs"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        </com.google.android.material.tabs.TabLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 </RelativeLayout>
 
