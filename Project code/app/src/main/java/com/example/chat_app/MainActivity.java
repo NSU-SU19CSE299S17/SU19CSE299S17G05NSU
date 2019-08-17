@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity
     private Toolbar mToolbar;
     private ViewPager myViewPager;
     private TabLayout myTabLayout;
+    private TabsAccessorAdapter mytabsAccessorAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,13 @@ public class MainActivity extends AppCompatActivity
         mToolbar = (Toolbar) findViewById(R.id.main_page_toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("ChitChat");
+
+        myViewPager = (ViewPager) findViewById(R.id.main_tabs_pager);
+        mytabsAccessorAdapter = new TabsAccessorAdapter(getSupportFragmentManager());
+        myViewPager.setAdapter(mytabsAccessorAdapter);
+
+        myTabLayout = (TabLayout) findViewById(R.id.main_tabs);
+        myTabLayout.setupWithViewPager(myViewPager);
 
     }
 
