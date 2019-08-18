@@ -3,6 +3,7 @@ package com.example.chat_app;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -26,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText UserEmail, UserPassword;
     private TextView NeedNewAccountLink, ForgotPasswordLink;
 
+    private ProgressDialog loadingBar;
     private FirebaseAuth mAuth;
 
     @Override
@@ -36,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
         InitializeFields();
 
         mAuth = FirebaseAuth.getInstance();
+        currentUser = mAuth.getCurrentUser() ;
 
         NeedNewAccountLink.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,6 +68,11 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         else{
+            loadingBar.setTitle("Logging In");
+            loadingBar.setMessage("Please wait");
+            loadingBar.setCanceledOnTouchOutside(true);
+            loadingBar.show();
+
             mAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
@@ -72,10 +80,12 @@ public class LoginActivity extends AppCompatActivity {
                             if(task.isSuccessful()){
                                 SendUserToMainActivity();
                                 Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                                loadingBar.dismiss();
                             }
                             else{
                                 String message = task.getException().toString();
                                 Toast.makeText(LoginActivity.this, "Error: " +message, Toast.LENGTH_SHORT).show();
+                                loadingBar.dismiss();
                             }
                         }
                     });
@@ -91,6 +101,7 @@ public class LoginActivity extends AppCompatActivity {
         UserPassword = (EditText) findViewById(R.id.login_password);
         NeedNewAccountLink = (TextView) findViewById(R.id.new_account_link);
         ForgotPasswordLink = (TextView) findViewById(R.id.forget_password_link);
+        loadingBar = new ProgressDialog(this);
     }
 
     @Override
