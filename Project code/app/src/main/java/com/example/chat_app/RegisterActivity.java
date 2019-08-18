@@ -3,6 +3,7 @@ package com.example.chat_app;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -25,6 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
     private TextView AlreadyHaveAccountLink;
 
     private FirebaseAuth mAuth;
+    private ProgressDialog loadingBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,16 +65,26 @@ public class RegisterActivity extends AppCompatActivity {
         }
 
         else{
+            loadingBar.setTitle("Creating new account");
+            loadingBar.setMessage("Please wait");
+            loadingBar.setCanceledOnTouchOutside(true);
+            loadingBar.show();
+
             mAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
+
                             if(task.isSuccessful()){
+                                SendUserToLoginActivity();
                                 Toast.makeText(RegisterActivity.this, "Account Created", Toast.LENGTH_SHORT).show();
+                                loadingBar.dismiss();
                             }
                             else{
                                 String message = task.getException().toString();
                                 Toast.makeText(RegisterActivity.this, "Error: " +message, Toast.LENGTH_SHORT).show();
+                                loadingBar.dismiss();
                             }
                         }
                     });
@@ -87,6 +99,8 @@ public class RegisterActivity extends AppCompatActivity {
         UserEmail = (EditText) findViewById(R.id.register_email);
         UserPassword = (EditText) findViewById(R.id.register_password);
         AlreadyHaveAccountLink = (TextView) findViewById(R.id.already_have_account_link);
+
+        loadingBar = new ProgressDialog(this);
     }
 
     private void SendUserToLoginActivity() {
