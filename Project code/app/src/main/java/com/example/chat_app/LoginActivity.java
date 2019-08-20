@@ -101,7 +101,7 @@ public class LoginActivity extends AppCompatActivity {
         ForgotPasswordLink = (TextView) findViewById(R.id.forget_password_link);
         loadingBar = new ProgressDialog(this);
     }
-    
+
 
     private void SendUserToMainActivity() {
         Intent loginIntent = new Intent(LoginActivity.this, MainActivity.class);
