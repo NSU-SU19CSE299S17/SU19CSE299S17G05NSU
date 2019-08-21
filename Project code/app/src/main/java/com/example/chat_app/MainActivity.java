@@ -67,10 +67,12 @@ public class MainActivity extends AppCompatActivity
 
     private void VerifyUserExistence() {
         String currentUserId = mAuth.getCurrentUser().getUid();
-        RootRef.child(currentUserId).addValueEventListener(new ValueEventListener() {
+        RootRef.child("Users").child(currentUserId).addValueEventListener(new ValueEventListener() {
+
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if(dataSnapshot.child("name").exists()){
+                if((dataSnapshot.child("name").exists()))
+                {
                     Toast.makeText(MainActivity.this, "Welcome", Toast.LENGTH_SHORT).show();
                 }
                 else
