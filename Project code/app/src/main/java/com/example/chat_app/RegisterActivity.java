@@ -1,8 +1,5 @@
 package com.example.chat_app;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,10 +10,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -26,6 +28,7 @@ public class RegisterActivity extends AppCompatActivity {
     private TextView AlreadyHaveAccountLink;
 
     private FirebaseAuth mAuth;
+    private DatabaseReference Rootref;
     private ProgressDialog loadingBar;
 
     @Override
@@ -34,6 +37,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         mAuth = FirebaseAuth.getInstance();
+        Rootref = FirebaseDatabase.getInstance().getReference();
 
         InitializeFields();
 
@@ -77,7 +81,10 @@ public class RegisterActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
 
                             if(task.isSuccessful()){
-                                SendUserToLoginActivity();
+                                String currentUserId = mAuth.getCurrentUser().getUid();
+                                Rootref.child("Users").child(currentUserId).setValue("");
+
+                                SendUserToMainActivity();
                                 Toast.makeText(RegisterActivity.this, "Account Created", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
                             }
@@ -92,7 +99,6 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
-
     private void InitializeFields() {
 
         CreateAccountButton = (Button) findViewById(R.id.register_button);
@@ -106,6 +112,13 @@ public class RegisterActivity extends AppCompatActivity {
     private void SendUserToLoginActivity() {
         Intent loginIntent = new Intent(RegisterActivity.this, LoginActivity.class);
         startActivity(loginIntent);
+    }
+
+    private void SendUserToMainActivity() {
+        Intent mainIntent = new Intent(RegisterActivity.this, MainActivity.class);
+        mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(mainIntent);
+        finish();
     }
 
 }
