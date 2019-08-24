@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
-                    Toast.makeText(MainActivity.this, groupName + " group is created succesfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, groupName + " group is created successfully", Toast.LENGTH_SHORT).show();
                 }
 
             }
