@@ -37,9 +37,6 @@ public class GroupsFragment extends Fragment
     private ArrayList<String> list_of_groups = new ArrayList<>();
 
     private DatabaseReference GroupRef;
-
-
-
     public GroupsFragment() {
         // Required empty public constructor
     }
@@ -49,6 +46,8 @@ public class GroupsFragment extends Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
     {
+
+        list_of_groups.add("hello");
         groupFragmentView = inflater.inflate(R.layout.fragment_groups, container, false);
 
 
@@ -103,7 +102,6 @@ public class GroupsFragment extends Fragment
                 {
                     set.add(((DataSnapshot)iterator.next()).getKey());
                 }
-
                 list_of_groups.clear();
                 list_of_groups.addAll(set);
                 arrayAdapter.notifyDataSetChanged();

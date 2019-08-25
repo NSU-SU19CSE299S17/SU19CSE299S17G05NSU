@@ -25,6 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Iterator;
 
 
 public class GroupChatActivity extends AppCompatActivity
@@ -80,7 +81,6 @@ public class GroupChatActivity extends AppCompatActivity
 
 
 
-    private void InitializeFields() {
     @Override
     protected void onStart() {
         super.onStart();
@@ -191,5 +191,15 @@ public class GroupChatActivity extends AppCompatActivity
     }
 
     private void DisplayMessages(DataSnapshot dataSnapshot) {
+        Iterator iterator = dataSnapshot.getChildren().iterator();
+
+        while (iterator.hasNext()){
+            String chatDate = (String)((DataSnapshot)iterator.next()).getValue();
+            String chatMessage = (String)((DataSnapshot)iterator.next()).getValue();
+            String chatName = (String)((DataSnapshot)iterator.next()).getValue();
+            String chatTime = (String)((DataSnapshot)iterator.next()).getValue();
+
+            displayTextMessages.append(chatName + ": \n " + chatMessage + " :\n " + chatTime + "     " + chatDate + "\n\n\n   ");
+        }
     }
 }
