@@ -76,7 +76,7 @@ public class GroupChatActivity extends AppCompatActivity
                 userMessageInput.setText("");
 
                 mScrollView.fullScroll(ScrollView.FOCUS_DOWN);
-                
+
             }
         });
     }

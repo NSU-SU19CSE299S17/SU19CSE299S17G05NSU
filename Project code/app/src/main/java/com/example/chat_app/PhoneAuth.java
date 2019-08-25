@@ -1,13 +1,13 @@
 package com.example.chat_app;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -95,7 +95,7 @@ public class PhoneAuth extends AppCompatActivity {
     private void userIsLoggedIn(){
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if(user != null){
-            startActivity(new Intent(getApplicationContext(), MainPageActivity.class));
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
             finish();
             return;
         }
