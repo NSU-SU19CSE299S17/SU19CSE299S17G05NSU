@@ -122,6 +122,7 @@ public class SettingsActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
                             if(task.isSuccessful()){
                                 Toast.makeText(SettingsActivity.this, "Profile Image set", Toast.LENGTH_SHORT).show();
+
                             }
                             else{
                                 String message = task.getException().toString();
