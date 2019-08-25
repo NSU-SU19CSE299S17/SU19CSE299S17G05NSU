@@ -7,6 +7,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -27,6 +28,7 @@ import com.google.firebase.storage.UploadTask;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
+import java.io.File;
 import java.util.HashMap;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -43,6 +45,8 @@ public class SettingsActivity extends AppCompatActivity {
 
     private final static int GalleryPick = 1 ;
     private StorageReference UserProfileImageReference ;
+    private final String Image_URL = "gs://chitchat-9d85c.appspot.com/Profile Images/0fpPbdh2hthjlTtYdnR8bHSbCtj2.jpg" ;
+    private ImageView imageView ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,6 +111,9 @@ public class SettingsActivity extends AppCompatActivity {
                 if(resultCode == RESULT_OK){
 
                     Uri resultUri = result.getUri();
+                    File file = new File(String.valueOf(resultUri));
+
+                    FirebaseStorage.getInstance().getReference();
 
                     StorageReference filepath = UserProfileImageReference.child(currentUserId + ".jpg");
 
