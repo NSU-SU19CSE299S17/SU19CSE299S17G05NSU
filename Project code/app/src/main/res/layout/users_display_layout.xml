@@ -76,6 +76,7 @@
                     android:textSize="16sp"
                     android:textAllCaps="false"
                     android:background="@android:color/holo_green_light"
+                    android:visibility="invisible"
                     />
 
                 <Button
@@ -88,6 +89,7 @@
                     android:textAllCaps="false"
                     android:background="@android:color/holo_red_dark"
                     android:textColor="@android:color/background_light"
+                    android:visibility="invisible"
                     />
 
             </LinearLayout>
