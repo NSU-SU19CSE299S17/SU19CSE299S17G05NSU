@@ -49,20 +49,45 @@ sadman.ahmed01@northsouth.edu
 	a. Features <br/>
 	b. Technology<br/>
 	c. Roadblocks <br/>
-<\p>
+</p>
 
-<h4>1.	Project Details </h4>
-Problem: The data shared between users in any chatting apps nowadays are not encrypted and can easily be intervened externally.
-Solution: This project is about making a chatting app in which data transfer at both ends of the users, would be encrypted. However, in this project, the main idea is to make an encrypted group chatting app and not only one-to-one. Also the app would be made for Android OS only. 
+<h4>1.	Project Summary </h4>
+This is a simple WhatsApp clone, in which the user can login or create an account in firebase. Then the user can use the app with whoever has the app installed and share info with them. 
 
 <h4>2.	Features	</h4>
-•	Data sharing between users 
-•	Protected sharing
-•	Interactive user interface
-•	Easy to install and use
+
+<ul>Login Activity</ul>
+	<p>
+	Users can create an account with email and password or phone number as well. They can then login with any of the following.
+	</p>
+<ul>Firebase implementation</ul>	
+	<p>
+	The app is implemented with firebase methods. It includes Firebase Authentication, Firebase Database and Firebase Storage 
+	</p>	
+<ul>Display </ul>
+	<p>
+	There are 4 fragments in the app, and also a drop down menu. The fragments are Chats, Contacts, Groups and Request.<br/>
+	The chats fragments show any active users that the user is chatting with. <br/>
+	The contacts fragments shows the users the contacts in the user's saved list<br/>
+	The groups fragment shows the groups in which the user is added.<br/>
+	The request fragement shows the sent requests to and by thee user.<br/><br/>
+	In the drop down menu, there are options to find friends which will basically redirect users to all those using the app. The create group option will allow the user to name and create a group. The settings option will allow the user to set a username, status and also picture. The logout button, takes the user out of the app.
+	</p>
+<ul>Group chat</ul>
+	<p>
+	The idea of group chat is implemented. Currently, users in the database are added in the group chat. For each person talking in the group, there is a tag for the name, date and time that the person has talked in the group.
+	</p>
+<ul>One to one chat</ul>
+	<p>
+	For one to one chat, users can send request to users and also accept requests. Upon accepting the request, the user can then start chatting with other user in the chat fragment.
+	Different colors added will be added for the sender and receiver texts.
+	</p>
+<ul></ul>
+<ul></ul>
+<ul></ul>
 
 <h4>3.	Technology </h4> 
-Android Studio would be used to make this app. For the decryption and encryption purpose, RSA algorithm would be used.
+Android Studio would be used to make this app. For the decryption and encryption purpose, Firebase security is used.
 
 <h4>4.	Monetization/Business plan </h4> The app would be free to use. However, there can many methods of monetization. In the home page, there would be ads displayed, clicking on which the user would be directed to the advertised product. They can then buy the products on which the app company may charge a commission on sales. If users do not want advertisements, they can upgrade to a premium ad-free service. Also, there can be in-app purchases made, where users can buy stickers or any other service out of the ordinary.
 
