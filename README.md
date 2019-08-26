@@ -84,7 +84,7 @@ This is a simple WhatsApp clone, in which the user can login or create an accoun
 	Different colors added will be added for the sender and receiver texts.
 	</p>
 
-<h4>3> Roadblocks</h4>
+<h4>3. Roadblocks</h4>
 A lot of methods could not be implemented due to shortage of time and also because the tutorial being followed was backdated.
 These methods include: 
 	<ul>Adding a profile image to the app</ul>
