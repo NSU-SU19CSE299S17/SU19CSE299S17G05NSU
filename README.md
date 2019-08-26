@@ -36,19 +36,19 @@ sadman.ahmed01@northsouth.edu
  <br/>
  sadman.ahmed01@northsouth.edu
  <br/>
- Git repos link: https://github.com/SadmanAhmed97/SU19CSE299S17G05NSU \n
+ Git repos link: https://github.com/SadmanAhmed97/SU19CSE299S17G05NSU <br/>
 	Slack link: https://app.slack.com/client/TKDJD0XGV/CKKK82VK6
  <br/>
  Date prepared: 16/06/2019
 </p>
 
 <h4>Table Of Contents</h4>
-<p>
-1) Project Summary \n
-2) Project Description\n
-	a. Features \n
-	b. Technology \n
-	c. Roadblocks \n
+<p><br/>
+1) Project Summary <br/>
+2) Project Description<br/>
+	a. Features <br/>
+	b. Technology<br/>
+	c. Roadblocks <br/>
 <\p>
 
 <h4>1.	Project Details </h4>
